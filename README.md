@@ -6,14 +6,17 @@ tv맛집 어플리케이션 다운로드 받기
 
 [Android PlayStore](https://google.com, "google play store link")
 
-## install
+## 데이터 수집
+웹 크롤링으로 tv에 나온 맛집정보 수집
 
-```sh
+```
 pod install
 ```
 
-## library
--  pod 'MobileVLCKit'
--  pod 'SnapKit'
--  pod 'RxSwift'
--  pod 'RxCocoa'
+## 데이터 저장
+firebase firestore를 이용하여 데이터 저장
+
+
+## 데이터 저장
+firebase firestore를 이용하여 데이터 저장
+
