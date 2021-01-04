@@ -35,6 +35,21 @@ beautifulsoup4설치
 pip install beautifulsoup4
 ```
 
+맥 기본 파이썬 2.7버전 >> 최신버전을 기본으로 설정
+
+```
+// 파이썬 설치 
+brew install python 
+// python3 > python 명령으로 대체 방법 
+vi ~/.zprofile (macOS 카탈리나) 
+// 추가 내용 
+alias python='python3' 
+// 소스 적용 
+source ~/.zprofile 
+// python 실행 
+python
+```
+
 html 파싱이용하여 수요미식회 정보 취득
 
 
