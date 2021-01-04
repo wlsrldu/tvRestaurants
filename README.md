@@ -1,7 +1,8 @@
 # tvRestaurants
+tv에 나온 맛집 정보 어플리케이션 개발과정 기록
+
 
 tv맛집 어플리케이션 다운로드 받기 
-
 [iOS Appstore](https://google.com, "appstore link")
 
 [Android PlayStore](https://google.com, "google play store link")
