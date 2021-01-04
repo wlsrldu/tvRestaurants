@@ -21,6 +21,8 @@ Requests, BeautifulSoup4
 pip설치
 ```
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+sudo python3 get-pip.py
+sudo easy_install pip
 ```
 
 Requests설치
