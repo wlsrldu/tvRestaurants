@@ -68,8 +68,86 @@ soup.select('#아이디명 > 태그명.클래스명)
 soup.select('태그명[속성1=값1]')
 ```
 
+selenium, bs4 사용하여 웹 크롤링하여 맛집정보 수집
+```
+######################################
+    #logic
+    SCROLL_PAUSE_TIME = 1.5 
+    last_height = driver.execute_script("return document.body.scrollHeight") 
+    isLoading = True
+    while isLoading:
+        for i in range(4): 
+            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);") 
+            time.sleep(SCROLL_PAUSE_TIME) 
+            
+            if len(driver.find_elements_by_css_selector("button[class^='btn_more_list']"))>0:
+                driver.find_element_by_css_selector("button[class^='btn_more_list']").click()
+            else:
+                isLoading = False
+            
+            new_height = driver.execute_script("return document.body.scrollHeight") 
+            if new_height == last_height: 
+                break 
+            last_height = new_height
+
+    ######################################
+    #get html
+    driver.implicitly_wait(2)
+    html = driver.page_source
+    soup = BeautifulSoup(html, 'html.parser')
+    restaurantList = soup.find('ul', class_='restaurant_list')
+
+    # print(len(restaurantList))
+    #print(restaurantList.text)
+
+
+    ######################################
+    #do parse
+    dataList = []
+    for data in restaurantList:
+        modelRestaurant = {}
+
+        titleTag = data.find(attrs={'class': 'box_module_title'})
+        stitleTag = data.find(attrs={'class': 'box_module_stitle'})
+        imgTag = data.find(attrs={'class': 'box_module_image'})
+        
+        addressTag = data.select_one('div.mil_inner_spot > span.il_text')
+        foodTypeTag = data.select_one('div.mil_inner_kind > span.il_text')
+        programTag = data.select_one('div.mil_inner_tv > span.il_text')
+
+        if titleTag is not None:
+            modelRestaurant['title'] = titleTag.text
+            # print(titleTag.text)
+
+        if stitleTag is not None:
+            modelRestaurant['stitle'] = stitleTag.text.strip()
+            # print(stitleTag.text.strip())
+
+        if addressTag is not None:
+            modelRestaurant['address'] = addressTag.text
+            # print(addressTag.text)        
+
+        if foodTypeTag is not None:
+            modelRestaurant['foodType'] = foodTypeTag.text
+
+        if programTag is not None:
+            modelRestaurant['program'] = programTag.text
+            # print(programTag.text)
+
+        if imgTag is not None:
+            modelRestaurant['img'] = imgTag['src']
+            modelRestaurant['description'] = imgTag['alt']
+            # print(imgTag['src'])
+            # print(imgTag['alt'])
+
+        if titleTag is not None:    
+            dataList.append(modelRestaurant)
+
+```
+
 ## 데이터 저장
 firebase firestore를 이용하여 데이터 저장
 
-
-
+```
+firestore에 수집한 데이터를 저장
+```
