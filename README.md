@@ -148,6 +148,7 @@ selenium, bs4 사용하여 웹 크롤링하여 맛집정보 수집
 ## 데이터 저장
 firebase firestore를 이용하여 데이터 저장
 
-```
-firestore에 수집한 데이터를 저장
-```
+## iOS 
+프로젝트 생성
+초기설정
+- pod install, config
