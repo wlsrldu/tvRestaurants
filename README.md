@@ -171,7 +171,7 @@ firebase firestore를 이용하여 데이터 저장
 ## mac mini를 이용해서 하루에 한번씩 웹크롤링 자동화 처리
 
 
-## iOS 
+# iOS 
 프로젝트 생성
 초기설정
 - pod install, config
@@ -194,3 +194,11 @@ firebase firestore를 이용하여 데이터 저장
   pod 'appstore-card-transition'
   pod 'RealmSwift'
 ```
+
+## 코딩 스타일 가이드
+코딩 스타일 가이드를 작성하기 위해 아래 링크들을 참조
+
+스위프트 기본 코드 컨벤션 : https://swift.org/documentation/api-design-guidelines/50
+airbnb : https://github.com/airbnb/swift
+linkedin : https://github.com/linkedin/swift-style-guide
+
