@@ -145,10 +145,52 @@ selenium, bs4 사용하여 웹 크롤링하여 맛집정보 수집
 
 ```
 
+## Geocoding API를 이용해 위경도 구하기
+```
+import googlemaps
+    for data in dataList:
+        gmaps = googlemaps.Client(key='키값')
+        geocode_result = gmaps.geocode(data['address'])
+        lat = geocode_result[0]['geometry']['location']['lat']
+        lng = geocode_result[0]['geometry']['location']['lng']
+        data['lat'] = lat
+        data['lng'] = lng
+```        
+
+## 기존 데이터와 비교하여 신규 추가된 목록만 저장하고 최신 업데이트 내역 갱신
+
+1. firestore 에 저장된 리스트 : saveFirebaseRestaurants
+2. 웹 크롤링된 리스트 : loadWebRestaurants
+3. saveFirebaseRestaurants 리스트와 loadWebRestaurants 비교하여 신규추가된 내역만 위경도값 조회하여 
+4. firestore에 저장
+5. 최신 업데이트 내역 관리 : collection(update) - document(2021-01-21) - list:{documentId,documentId,documentId} 
+
 ## 데이터 저장
 firebase firestore를 이용하여 데이터 저장
+
+## mac mini를 이용해서 하루에 한번씩 웹크롤링 자동화 처리
+
 
 ## iOS 
 프로젝트 생성
 초기설정
 - pod install, config
+
+## 사용라이브러리
+```
+  $firebase_version = '7.2-M1'
+  # Pods for tvRestaurant
+  pod 'Firebase/Analytics', $firebase_version
+  pod 'Firebase/Messaging', $firebase_version
+  pod 'Firebase/Firestore', $firebase_version
+  
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'lottie-ios'
+  pod 'UIGradient'
+  
+  pod 'FSPagerView'
+  pod 'Hero'
+  pod 'appstore-card-transition'
+  pod 'RealmSwift'
+```
