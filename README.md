@@ -1,5 +1,7 @@
 # tvRestaurants
 tv에 나온 맛집 정보 어플리케이션 개발과정 기록
+- 데이터 수집 : python3, selenium, google geocoding api, firestore
+- iOS : swift
 
 
 tv맛집 어플리케이션 다운로드 받기 
