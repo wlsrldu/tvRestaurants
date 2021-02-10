@@ -1,5 +1,5 @@
 # 데이터 수집
-python3, selenium, google geocoding api, firestore 사용
+python3, selenium, beautifulsoup4, google geocoding api, firestore 사용
 
 ## 프로세스 
 1. 웹 크롤링해서 전체 데이터 호출
@@ -51,8 +51,6 @@ source ~/.zprofile
 // python 실행 
 python
 ```
-
-html 파싱이용하여 수요미식회 정보 취득
 
 soup사용방법
 ```
@@ -159,15 +157,14 @@ import googlemaps
         data['lng'] = lng
 ```        
 
-## 기존 데이터와 비교하여 신규 추가된 목록만 저장하고 최신 업데이트 내역 갱신
-
-1. firestore 에 저장된 리스트 : saveFirebaseRestaurants
-2. 웹 크롤링된 리스트 : loadWebRestaurants
-3. saveFirebaseRestaurants 리스트와 loadWebRestaurants 비교하여 신규추가된 내역만 위경도값 조회하여 
-4. firestore에 저장
-5. 최신 업데이트 내역 관리 : collection(update) - document(2021-01-21) - list:{documentId,documentId,documentId} 
-
 ## 데이터 저장
 firebase firestore를 이용하여 데이터 저장
 
 ## mac mini를 이용해서 하루에 한번씩 웹크롤링 자동화 처리
+
+# TODO 
+현재는 리스트에 노출되는 정보만 수집하지만, 추후 고도화시에 상세페이지로 접근하여 상세 화면에 있는 정보를 수집
+- 전화번호 취득 로직 추가
+- 기타정보 취득 로직 추가
+
+
