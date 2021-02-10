@@ -205,3 +205,6 @@ firebase firestore를 이용하여 데이터 저장
 airbnb : https://github.com/airbnb/swift
 linkedin : https://github.com/linkedin/swift-style-guide
 
+## 퍼포먼스 향상을 위해 Texture 도입 
+기존 storyboard로 작성된 뷰를 Texture Layout API로 변경 
+
