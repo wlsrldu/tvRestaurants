@@ -15,17 +15,19 @@ tv에 나온 맛집 정보 어플리케이션 개발과정을 기록
 
 ## 데이터 수집
 python, selenium 웹 크롤링을 이용해 tv에 나온 맛집정보 수집
-[개발과정 보러가기] (https://google.com, "link")
+
+[개발과정 보러가기](https://google.com, "link")
 
 
 ## iOS 개발
 주요 정보 swift, rxSwift, texture, realmSwift, snapkit 등을 사용
-[개발과정 보러가기] (https://google.com, "link")
+
+[개발과정 보러가기](https://google.com, "link")
 
 
 ## android 개발
 주요 정보 kotlin
-[개발과정 보러가기] (https://google.com, "link")
+[개발과정 보러가기](https://google.com, "link")
 
 
 
