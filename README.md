@@ -30,4 +30,4 @@ python, selenium 웹 크롤링을 이용해 tv에 나온 맛집정보 수집
 ## android 개발
 주요 정보 kotlin
 
-[개발과정 보러가기](https://google.com "link")
+[개발과정 보러가기](https://github.com/wlsrldu/tvRestaurants/tree/main/android "link")
