@@ -1,6 +1,6 @@
 # 마맛텔 iOS application
 
-<img width="50%" src="https://user-images.githubusercontent.com/5423077/117392300-bed53e00-af2c-11eb-9a9f-56dd891d8fd9.gif"/>
+<img width="30%" src="https://user-images.githubusercontent.com/5423077/117392300-bed53e00-af2c-11eb-9a9f-56dd891d8fd9.gif"/>
 
 출처: https://ndb796.tistory.com/557 [안경잡이개발자]
 
