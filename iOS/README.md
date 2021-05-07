@@ -1,6 +1,6 @@
 # 마맛텔 iOS application
 
-![Uploading 마맛텔.gif…]()
+![마맛텔](https://user-images.githubusercontent.com/5423077/117392300-bed53e00-af2c-11eb-9a9f-56dd891d8fd9.gif)
 
 
 프로젝트 생성
