@@ -1,4 +1,8 @@
-# iOS 
+# 마맛텔 iOS application
+
+![Uploading 마맛텔.gif…]()
+
+
 프로젝트 생성
 초기설정
 - pod install, config
