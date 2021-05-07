@@ -1,10 +1,6 @@
 # 마맛텔 iOS application
 
-<img width="30%" src="https://user-images.githubusercontent.com/5423077/117392300-bed53e00-af2c-11eb-9a9f-56dd891d8fd9.gif"/>
-
-출처: https://ndb796.tistory.com/557 [안경잡이개발자]
-
-출처: https://ndb796.tistory.com/557 [안경잡이개발자]
+<img width="20%" src="https://user-images.githubusercontent.com/5423077/117392300-bed53e00-af2c-11eb-9a9f-56dd891d8fd9.gif"/>
 
 프로젝트 생성
 초기설정
